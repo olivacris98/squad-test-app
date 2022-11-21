@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "638e8dc2-2ed3-4e1d-acd5-010601cabbde",
+		"name": "Squad test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18072256"
+	},
+	"item": [
+		{
+			"name": "Joke",
+			"item": [
+				{
+					"name": "Joke",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/joke?Chuck=Dad",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"joke"
+							],
+							"query": [
+								{
+									"key": "Chuck",
+									"value": "Chuck",
+									"disabled": true
+								},
+								{
+									"key": "Chuck",
+									"value": "Dad"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Joke",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wee\":33\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/joke?number=5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"joke"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Joke Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joke\": \"Nuevo chiste\",\r\n    \"number\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/joke",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"joke"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Joke",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joke\": \"Habia vez un pollito chiquitico que no podía caminar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/joke",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"joke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Math",
+			"item": [
+				{
+					"name": "Math",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/math?number=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"math"
+							],
+							"query": [
+								{
+									"key": "numbers",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "numbers",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "number",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
