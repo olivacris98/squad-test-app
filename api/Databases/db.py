@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
 connect_url = sqlalchemy.engine.url.URL(
     'mysql+pymysql',
     username="root",
-    password="",
+    password="admin",
     host="",
     port=3306,
     database="squad_test")

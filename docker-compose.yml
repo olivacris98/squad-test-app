@@ -3,27 +3,33 @@ services:
   web:
     container_name: squad-app
     build: .
+    restart: always
     ports:
       - 5000:5000
-    depends_on:
-      - db
     environment:
-      - ENV=Development
       - FLASK_DEBUG=1
     volumes:
       - .:/app
 
+    networks:
+        - backend
+
   db:
     image: mysql:5.7
     volumes:
-      - db-data:/data/db
+        - ./database:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: squad_test  
-      MYSQL_PASSWORD: ""
     ports: 
-      - 3307:3306
+      - 3306:3306
+    networks:
+        - backend
+
+networks:
+    backend:
 
 volumes:
-  db-data:
+    database:
