@@ -1,25 +1,8 @@
-import json
-import os
-import sqlalchemy
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
+from sqlalchemy.ext.declarative import declarative_base
 
-connect_url = sqlalchemy.engine.url.URL(
-    'mysql+pymysql',
-    username="root",
-    password="admin",
-    host="",
-    port=3306,
-    database="squad_test")
+engine = create_engine("mysql+pymysql://root:admin@db/squad_test")
 
-engine = sqlalchemy.create_engine(connect_url)
 Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
-
-
-def get_session():
-    return Session()
-
-
-def get_engine():
-    return engine

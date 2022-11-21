@@ -1,4 +1,4 @@
-from ..Databases.db import Base
+from ..Databases.db import Base, engine
 from sqlalchemy import Column, Integer, String
 
 
@@ -11,3 +11,8 @@ class JokeModel(Base):
 
     def __init__(self, **kwargs):
         self.joke = kwargs["joke"]
+
+
+if __name__ == "__main__":
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
