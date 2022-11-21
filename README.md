@@ -1,4 +1,4 @@
-# python-flask-squalchemy-docker-app
+# python-flask-sqlalchemy-docker-app
 
 [![Language](https://img.shields.io/badge/language-python3-brightgreen)](https://www.python.org/)
 [![License](https://bitbucket.org/christianlivan0898/squad-test-app/src/master/)](https://opensource.org/licenses/MIT)
@@ -26,15 +26,9 @@ This is a starter or boilerplate to create RESTful API with Python and SQl using
 $ docker-compose up
 ```
 
-It will run both Web and Mongodb containers in Development environment on `localhost:5100`.
+It will run both Web and Mongodb containers in Development environment on `localhost:5000`.
 For other environments change ENV in `docker-compose.yml`:
 
-```sh
-web:
-   ...
-    environment:
-      - ENV=Testing
-```
 
 You can use Development, Production or Testing or add your own environment in `api/config.py`.
 
@@ -76,7 +70,11 @@ By default Swagger runs on `/` so you should see it on `http://localhost:5000`. 
 
 You can run tests easily within Docker container:
 
+```
+run python test\text_base.py
+```
 
 ## License
 
 See LICENSE file.
+olivacris98
