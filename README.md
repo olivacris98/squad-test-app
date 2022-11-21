@@ -69,16 +69,13 @@ Here is a folder and file structure with explanation.
 ## Documentation
 
 Thanks to handy decorators this boilerplate will generate Swagger with documentation on the fly.
-By default Swagger runs on `/` so you should see it on `http://localhost:5100`. Read more [here](https://flask-restplus.readthedocs.io/en/stable/swagger.html).
+By default Swagger runs on `/` so you should see it on `http://localhost:5000`. Read more [here](https://flask-restplus.readthedocs.io/en/stable/swagger.html).
 
 
 ## Testing
 
 You can run tests easily within Docker container:
 
-```
-docker-compose run web python tests/test_base.py
-```
 
 ## License
 
